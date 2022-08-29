@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Полина Дьячкова</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light"
+<div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#p4">Обо мне</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#p1">Навыки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#p3">Портфолио</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#p2"> Контакты</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- Главная-->
+<div class="container-fluid bg-light p-5" align="center">
+    <div class="card" style="max-width: 1080px; border: none;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://sun9-5.userapi.com/impg/gqeXVT24EbjT6R7uebp66rC74HyJ_BI-nttpwg/17ZOLwB9s5I.jpg?size=431x576&quality=95&sign=b2370bc27242a4ac95013f48e494a395&type=album"
+                     class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-title" align="left"><strong> <font size="6" face="Roboto"> Полина</br>
+                        Дьячкова </font></strong></p>
+                    <div class="col-sm">
+                        <p class="card-text" align="left"> 18 лет, Ульяновск</p>
+                        <div align="right">
+                            <ul class="list-inline" text-align="center"
+                                style="ext-decoration:none; font-family: Roboto;">
+                                <li class="list-group-item">UX | UI дизайнер</li>
+                                <li class="list-group-item">Intern-разработчик</li>
+                                <li class="list-group-item" style="color: grey; ">вокалист-исполнитель</li>
+                                <li class="list-group-item" style="color: grey;">автор сборника стихов</li>
+                            </ul>
+                            <a class="btn btn-primary" href="#p2" role="button"
+                               style="background-color: #1e2212; color: white; border: none">Связаться</a>
+                            <a class="btn btn-primary" href="#p1" role="button"
+                               style="background-color: #1e2212; color: white; border: none">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Главная-->
+
+<!-- Обо мне -->
+<div class="container-fluid bg-black p-5" align="center">
+    <div class="card text-white bg-black mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <p class="card-title"><strong> <font size="5" face="Roboto" id="p4"> Обо мне </font> </strong></p>
+            {% for item in abouts %}
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="col-sm">
+                        <p class="card-text" style="width: 25rem;"> {{item.info}} </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ item.icons.url }}" class="img-fluid rounded-float-right">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Обо мне -->
+
+<!--  графика -->
+<div class="container mt-5" align="center">
+    <p id="p1"><strong> <font size="5" face="Roboto"> {{title}} </font> </strong></p>
+    <div class="col-sm">
+        <!--        {% with i=0 %}-->
+        {% for item in skill_1 %}
+        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
+        {% for item in element_1 %}
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+            {% if item.logotypes %}
+            <div>
+                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
+            </div>
+            {% else %}
+
+            {% endif %}
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+            </div>
+        </div>
+
+        {% endfor %}
+        {%endfor%}
+        <!--       {% endwith %}-->
+    </div>
+</div>
+<!--  графика -->
+<!--  программ-->
+<div class="container" align="center">
+    <div class="col-sm">
+        <!--        {% with i=0 %}-->
+        {% for item in skill_2 %}
+        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
+        {% for item in element_2 %}
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+            {% if item.logotypes %}
+            <div>
+                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
+            </div>
+            {% else %}
+
+            {% endif %}
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+            </div>
+        </div>
+
+        {% endfor %}
+        {%endfor%}
+        <!--       {% endwith %}-->
+    </div>
+</div>
+<!--  программ -->
+<!--  музыка-->
+<div class="container" align="center">
+    <div class="col-sm">
+        <!--        {% with i=0 %}-->
+        {% for item in skill_3 %}
+        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
+        {% for item in element_3 %}
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+            {% if item.logotypes %}
+            <div>
+                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
+            </div>
+            {% else %}
+
+            {% endif %}
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+            </div>
+        </div>
+
+        {% endfor %}
+        {%endfor%}
+        <!--       {% endwith %}-->
+    </div>
+</div>
+<!--  музыка -->
+<!--  ВД-->
+<div class="container" align="center">
+    <div class="col-sm">
+        <!--        {% with i=0 %}-->
+        {% for item in skill_4 %}
+        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
+        {% for item in element_4 %}
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+            {% if item.logotypes %}
+            <div>
+                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
+            </div>
+            {% else %}
+
+            {% endif %}
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+            </div>
+        </div>
+
+        {% endfor %}
+        {%endfor%}
+        <!--       {% endwith %}-->
+    </div>
+</div>
+<!--  ВД-->
+
+<!-- Партфолио-->
+<div class="container-fluid pе-5" align="center" style="border: none;">
+    <div class="card mb-3" style="max-width: 1000px; border:none;" >
+        <div class="row g-0">
+            <p class="card-title"><strong> <font size="5" face="Roboto" id="p3"> Портфолио </font> </strong></p>
+            {% for item in examp %}
+            <div class="card mb-5 mt-3"  style="border: none;">
+                <img src="{{item.pict.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title">{{item.name}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Партфолио-->
+
+<!-- Контакты -->
+<div class="container mt-3" align="center">
+    <p id="p2"><strong> <font size="5" face="Roboto"> Контакты </font> </strong></p>
+    <div class="col-sm">
+        {% for item in contacts %}
+        <div class=" shadow-none card p-3 ml-125 mr-125"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+            {% if item.media %}
+            <div>
+               <a href="{{item.hr}}"><img src="{{ item.media.url }}" width="50" height="50"/> </a>
+            </div>
+            {% else %}
+
+            {% endif %}
+        </div>
+        {% endfor %}
+        <p> <font size="2" face="Roboto" color="grey" > Напишите мне в</br>Vkontakte, Telegram, Mail.ru, What's Up </font> </p>
+
+    </div>
+</div>
+
+<!-- Контакты -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+</body>
+</html>

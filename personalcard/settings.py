@@ -81,7 +81,7 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'card',
+        'NAME': 'database',
         'USER': 'root',
         'PASSWORD': 'polina27',
         'HOST': '127.0.0.1',

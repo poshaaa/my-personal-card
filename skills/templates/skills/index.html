@@ -76,18 +76,56 @@
     <div class="card text-white bg-black mb-3" style="max-width: 540px;">
         <div class="row g-0">
             <p class="card-title"><strong> <font size="5" face="Roboto" id="p4"> Обо мне </font> </strong></p>
-            {% for item in abouts %}
+
             <div class="col-md-8">
                 <div class="card-body">
                     <div class="col-sm">
-                        <p class="card-text" style="width: 25rem;"> {{item.info}} </p>
+                        <p class="card-text" style="width: 25rem;"> Привет, меня зовут Полина и я создаю красоту! В этом
+                            мне помогает навык работы с растровой и векторной графикой и любовь к Веб-дизайну. </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="{{ item.icons.url }}" class="img-fluid rounded-float-right">
+                <img src="/media/photos/design.png" class="img-fluid rounded-float-right">
             </div>
-            {% endfor %}
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="col-sm">
+                        <p class="card-text" style="width: 25rem;"> Также я активно практикую frontend разработку и
+                            изучаю программирование (backend). </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="/media/photos/comp.png" class="img-fluid rounded-float-right">
+            </div>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="col-sm">
+                        <p class="card-text" style="width: 25rem;"> Неотъемлемой частью меня является музыка и поэзия,
+                            поэтому я уделаю большое количество времени занятиям по вокалу и редактуре. А после с
+                            удовольствием демонстрирую своё творчество. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="/media/photos/lamp.png" class="img-fluid rounded-float-right">
+            </div>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="col-sm">
+                        <p class="card-text" style="width: 25rem;"> Владею английским языком на уровне C1
+                            (upper-intermediate) и испанским А2(Inicial). </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="/media/photos/lang.png" class="img-fluid rounded-float-right">
+            </div>
+
         </div>
     </div>
 </div>
@@ -95,127 +133,226 @@
 
 <!--  графика -->
 <div class="container mt-5" align="center">
-    <p id="p1"><strong> <font size="5" face="Roboto"> {{title}} </font> </strong></p>
+    <p id="p1"><strong> <font size="5" face="Roboto"> Навыки </font> </strong></p>
     <div class="col-sm">
-        <!--        {% with i=0 %}-->
-        {% for item in skill_1 %}
-        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
-        {% for item in element_1 %}
+        <!--        -->
+
+        <div><p><font size="3" face="Roboto"> В каких программах работаю с графикой </font></p></div>
+
         <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
              style=" border: none; width: 13 rem; display: inline-block; ">
-            {% if item.logotypes %}
-            <div>
-                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
-            </div>
-            {% else %}
 
-            {% endif %}
+            <div>
+                <img src="/media/photos/photoshop.png" width="100" height="100">
+            </div>
+
             <div class=" card-body">
-                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+                <p class="card-text"><font size="2" face="Roboto">Adobe Photoshop </font></p>
             </div>
         </div>
 
-        {% endfor %}
-        {%endfor%}
-        <!--       {% endwith %}-->
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/AI.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">Adobe Illustrator </font></p>
+            </div>
+        </div>
+
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/AE.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">Adobe After Effects </font></p>
+            </div>
+        </div>
+
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/Figma.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">Figma </font></p>
+            </div>
+        </div>
+
+        <!--       -->
     </div>
 </div>
 <!--  графика -->
 <!--  программ-->
 <div class="container" align="center">
     <div class="col-sm">
-        <!--        {% with i=0 %}-->
-        {% for item in skill_2 %}
-        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
-        {% for item in element_2 %}
+        <!--        -->
+
+        <div><p><font size="3" face="Roboto"> Какие языки программирования изучаю </font></p></div>
+
         <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
              style=" border: none; width: 13 rem; display: inline-block; ">
-            {% if item.logotypes %}
-            <div>
-                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
-            </div>
-            {% else %}
 
-            {% endif %}
+            <div>
+                <img src="/media/photos/pythonnn.png" width="100" height="100">
+            </div>
+
             <div class=" card-body">
-                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+                <p class="card-text"><font size="2" face="Roboto">Python </font></p>
             </div>
         </div>
 
-        {% endfor %}
-        {%endfor%}
-        <!--       {% endwith %}-->
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/c.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">c++ </font></p>
+            </div>
+        </div>
+
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/css.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">css </font></p>
+            </div>
+        </div>
+
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/html.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">HTML </font></p>
+            </div>
+        </div>
+
+
+        <!--       -->
     </div>
 </div>
 <!--  программ -->
 <!--  музыка-->
 <div class="container" align="center">
     <div class="col-sm">
-        <!--        {% with i=0 %}-->
-        {% for item in skill_3 %}
-        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
-        {% for item in element_3 %}
+        <!--        -->
+
+        <div><p><font size="3" face="Roboto"> В каких музыкальных объединениях состою </font></p></div>
+
         <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
              style=" border: none; width: 13 rem; display: inline-block; ">
-            {% if item.logotypes %}
-            <div>
-                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
-            </div>
-            {% else %}
 
-            {% endif %}
+            <div>
+                <img src="/media/photos/Eniac.png" width="100" height="100">
+            </div>
+
             <div class=" card-body">
-                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+                <p class="card-text"><font size="2" face="Roboto">Eniac </font></p>
             </div>
         </div>
 
-        {% endfor %}
-        {%endfor%}
-        <!--       {% endwith %}-->
+
+        <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
+             style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <img src="/media/photos/progolos_WLlGmt0.png" width="100" height="100">
+            </div>
+
+            <div class=" card-body">
+                <p class="card-text"><font size="2" face="Roboto">PROГолос </font></p>
+            </div>
+        </div>
+
+
+        <!--       -->
     </div>
 </div>
 <!--  музыка -->
 <!--  ВД-->
 <div class="container" align="center">
     <div class="col-sm">
-        <!--        {% with i=0 %}-->
-        {% for item in skill_4 %}
-        <div><p><font size="3" face="Roboto"> {{item.description}} </font></p></div>
-        {% for item in element_4 %}
+        <!--        -->
+
+        <div><p><font size="3" face="Roboto"> Где обучаюсь языкам </font></p></div>
+
         <div class=" shadow-none card p-3 ml-125 mr-125 mb-5"
              style=" border: none; width: 13 rem; display: inline-block; ">
-            {% if item.logotypes %}
-            <div>
-                <img src="{{ item.logotypes.url }}" width="100" height="100"/>
-            </div>
-            {% else %}
 
-            {% endif %}
+            <div>
+                <img src="/media/photos/VD.png" width="100" height="100">
+            </div>
+
             <div class=" card-body">
-                <p class="card-text"><font size="2" face="Roboto">{{item.description_element}} </font></p>
+                <p class="card-text"><font size="2" face="Roboto">Волга-Днепр </font></p>
             </div>
         </div>
 
-        {% endfor %}
-        {%endfor%}
-        <!--       {% endwith %}-->
+
+        <!--       -->
     </div>
 </div>
 <!--  ВД-->
 
 <!-- Партфолио-->
 <div class="container-fluid pе-5" align="center" style="border: none;">
-    <div class="card mb-3" style="max-width: 1000px; border:none;" >
+    <div class="card mb-3" style="max-width: 1000px; border:none;">
         <div class="row g-0">
             <p class="card-title"><strong> <font size="5" face="Roboto" id="p3"> Портфолио </font> </strong></p>
-            {% for item in examp %}
-            <div class="card mb-5 mt-3"  style="border: none;">
-                <img src="{{item.pict.url}}" class="card-img-top" alt="...">
+
+            <div class="card mb-5 mt-3" style="border: none;">
+                <img src="/media/photos/DigitNight_Ltelp8C.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-title">{{item.name}}</p>
+                    <p class="card-title">Визуал иммерсивного шоу “Цифровая ночь”</p>
                 </div>
             </div>
-            {% endfor %}
+
+            <div class="card mb-5 mt-3" style="border: none;">
+                <img src="/media/photos/stikers_5QkLdBq.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title">Стикер-пак для УлГТУ в рамках Студсовета</p>
+                </div>
+            </div>
+
+            <div class="card mb-5 mt-3" style="border: none;">
+                <img src="/media/photos/logot.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title">Последние созданные логотипы</p>
+                </div>
+            </div>
+
+            <div class="card mb-5 mt-3" style="border: none;">
+                <img src="/media/photos/posha_hjZegqS.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title">Обработка фотографий разного типа и сложности под псевдонимом "Posha"</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -225,25 +362,46 @@
 <div class="container mt-3" align="center">
     <p id="p2"><strong> <font size="5" face="Roboto"> Контакты </font> </strong></p>
     <div class="col-sm">
-        {% for item in contacts %}
-        <div class=" shadow-none card p-3 ml-125 mr-125"
-             style=" border: none; width: 13 rem; display: inline-block; ">
-            {% if item.media %}
-            <div>
-               <a href="{{item.hr}}"><img src="{{ item.media.url }}" width="50" height="50"/> </a>
-            </div>
-            {% else %}
 
-            {% endif %}
+        <div class=" shadow-none card p-3 ml-125 mr-125" style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <a href="https://vk.com/pppposha"><img src="/media/photos/vk-social-network-logo.png" width="50"
+                                                       height="50"> </a>
+            </div>
+
         </div>
-        {% endfor %}
-        <p> <font size="2" face="Roboto" color="grey" > Напишите мне в</br>Vkontakte, Telegram, Mail.ru, What's Up </font> </p>
+
+        <div class=" shadow-none card p-3 ml-125 mr-125" style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <a href="https://t.me/dposha"><img src="/media/photos/telegram.png" width="50" height="50"> </a>
+            </div>
+
+        </div>
+
+        <div class=" shadow-none card p-3 ml-125 mr-125" style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <a href="mailto:posha_ps@mail.ru"><img src="/media/photos/email.png" width="50" height="50"> </a>
+            </div>
+
+        </div>
+
+        <div class=" shadow-none card p-3 ml-125 mr-125" style=" border: none; width: 13 rem; display: inline-block; ">
+
+            <div>
+                <a href="https://wa.me/79041836365?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D1%83%20%D1%82%D0%B5%D0%B1%D1%8F%20%D0%BA%D1%80%D1%83%D1%82%D0%B0%D1%8F%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0!"><img
+                        src="/media/photos/whatsapp.png" width="50" height="50"> </a>
+            </div>
+
+        </div>
+
+        <p><font size="2" face="Roboto" color="grey"> Напишите мне в<br>Vkontakte, Telegram, Mail.ru, What's Up </font>
+        </p>
 
     </div>
 </div>
-
-<!-- Контакты -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
